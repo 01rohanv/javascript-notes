@@ -1,4 +1,4 @@
-1.Sorting- BubbleSort , SelectionSort, InsertionSort,mergeSort
+1.Sorting- BubbleSort , SelectionSort, InsertionSort, QuickSort, MergeSort
 
 2.Flat the given Array
 
