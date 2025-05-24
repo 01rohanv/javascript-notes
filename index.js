@@ -304,3 +304,17 @@ function secondSmallest(arr) {
   return secondSmallest === Infinity ? null : secondSmallest;
 }
 console.log(secondSmallest(arr));
+
+//13. Sort first half in ascending order and second half in descending
+// const arr = [8, 3, 7, 1, 5, 6, 4, 2];
+
+function SortAscDesc(arr) {
+  let mid = Math.floor(arr.length / 2);
+
+  let first = arr.slice(0, mid).sort((a, b) => a - b);
+  let second = arr.slice(mid).sort((a, b) => b - a);
+
+  return first.concat(second);
+}
+
+console.log(SortAscDesc(arr));

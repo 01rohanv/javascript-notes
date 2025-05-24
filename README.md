@@ -21,3 +21,5 @@
 11. Find Largest element in an array
 
 12. Find Second Smallest Element in an Array
+
+13. Sort first half in ascending order and second half in descending
