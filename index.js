@@ -55,7 +55,7 @@ function InsertionSort(nums) {
 console.log(InsertionSort(nums));
 
 // -------------QuickSort------------
-let arr = [8, 3, 1, 7, 0, 10, 2];
+// let arr = [8, 3, 1, 7, 0, 10, 2];
 
 function quickSort(arr) {
   if (arr.length <= 1) return arr;
@@ -76,35 +76,30 @@ console.log(quickSort(arr));
 
 // --------------Merge Sort-----------
 
-const numbers = [38, 27, 43, 3, 9, 82, 10];
+// let arr = [8, 3, 1, 7, 0, 10, 2];
 
 function mergeSort(arr) {
   if (arr.length <= 1) return arr;
 
-  const middle = Math.floor(arr.length / 2);
-  const left = mergeSort(arr.slice(0, middle));
-  const right = mergeSort(arr.slice(middle));
-
+  let mid = Math.floor(arr.length / 2);
+  let left = mergeSort(arr.slice(0, mid));
+  let right = mergeSort(arr.slice(mid));
   return merge(left, right);
 }
 
 function merge(left, right) {
-  let i = 0;
-  let j = 0;
   let result = [];
-  while (i < left.length && j < right.length) {
-    if (left[i] < right[j]) {
-      result.push(left[i]);
-      i++;
+  while (left.length && right.length) {
+    if (left[0] < right[0]) {
+      result.push(left.shift());
     } else {
-      result.push(right[j]);
-      j++;
+      result.push(right.shift());
     }
   }
-  return result.concat(left.slice(i)).concat(right.slice(j));
+  return result.concat(left, right);
 }
 
-console.log(mergeSort(numbers));
+console.log(mergeSort(arr));
 
 // ---------------2.Flat this Array-----------------------
 const nested = [1, [2, [3, [4, 5]]], 6];
