@@ -270,3 +270,37 @@ function binarySearch(arr, target) {
 
   return -1; // not found
 }
+
+// 11.Find Largest element in an array
+
+// const arr = [10, 45, 2, 89, 33];
+
+let lar = arr[0];
+for (let i = 1; i < arr.length; i++) {
+  if (arr[i] > lar) {
+    lar = arr[i];
+  }
+}
+console.log(lar);
+
+// 12.Find Second Smallest Element in an Array
+
+const arr = [10, 3, 5, 1, 7, 1];
+
+function secondSmallest(arr) {
+  let smallest = Infinity;
+  let secondSmallest = Infinity;
+
+  for (let num of arr) {
+    if (num < smallest) {
+      secondSmallest = smallest;
+      smallest = num;
+    } else {
+      if (num > smallest && num < secondSmallest) {
+        secondSmallest = num;
+      }
+    }
+  }
+  return secondSmallest === Infinity ? null : secondSmallest;
+}
+console.log(secondSmallest(arr));

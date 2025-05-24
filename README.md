@@ -17,3 +17,7 @@
 9. Construct an object from a string
 
 10. Binary Search
+
+11. Find Largest element in an array
+
+12. Find Second Smallest Element in an Array
