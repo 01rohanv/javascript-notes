@@ -318,3 +318,29 @@ function SortAscDesc(arr) {
 }
 
 console.log(SortAscDesc(arr));
+
+// 14. Sorting elements of an array by frequency
+// const arr = [4, 5, 6, 5, 4, 3];
+function SortWithFrequency(arr) {
+  let element = {};
+
+  for (let i = 0; i < arr.length; i++) {
+    if (element[arr[i]]) {
+      element[arr[i]]++;
+    } else {
+      element[arr[i]] = 1;
+    }
+  }
+
+  arr.sort((a, b) => {
+    let freqA = element[a];
+    let freqB = element[b];
+
+    if (freqA !== freqB) {
+      return freqB - freqA;
+    }
+    return a - b;
+  });
+  return arr;
+}
+console.log(SortWithFrequency(arr));
