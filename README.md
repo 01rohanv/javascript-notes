@@ -1,27 +1,20 @@
-1. Sorting- BubbleSort , SelectionSort, InsertionSort, QuickSort, MergeSort
+## Index of Problems
 
-2. Flat the given Array
-
-3. Frequency of Element
-
-4. Count Distinct element
-
-5. Repeating element
-
-6. Non-Repeating element
-
-7. Non-Repeating element in String
-
-8. Disjoint or Not
-
-9. Construct an object from a string
-
-10. Binary Search
-
-11. Find Largest element in an array
-
-12. Find Second Smallest Element in an Array
-
-13. Sort first half in ascending order and second half in descending
-
-14. Sorting elements of an array by frequency
+1. [Bubble Sort](./index.js#L3)
+2. [Selection Sort](./index.js#L20)
+3. [Insertion Sort](./index.js#L31)
+4. [Quick Sort](./index.js#L46)
+5. [Merge Sort](./index.js#L63)
+6. [Flat the given Array](./index.js#L89)
+7. [Frequency of Element](./index.js#L98)
+8. [Count Distinct element](./index.js#L110)
+9. [Repeating element](./index.js#L123)
+10. [Non-Repeating element](./index.js#L140)
+11. [Non-Repeating element in String](./index.js#L157)
+12. [Disjoint or Not](./index.js#L172)
+13. [Construct object from string](./index.js#L183)
+14. [Binary Search](./index.js#L193)
+15. [Find Largest Element](./index.js#L204)
+16. [Find Second Smallest Element](./index.js#L211)
+17. [Sort Half Asc Half Desc](./index.js#L222)
+18. [Sort by Frequency](./index.js#L231)
