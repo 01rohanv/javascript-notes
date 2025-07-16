@@ -18,3 +18,4 @@
 16. [Find Second Smallest Element](./index.js#L290)
 17. [Sort Half Asc Half Desc](./index.js#L311)
 18. [Sort by Frequency](./index.js#L324)
+19. [Flat Complex](./index.js#L348)

@@ -344,3 +344,40 @@ function SortWithFrequency(arr) {
   return arr;
 }
 console.log(SortWithFrequency(arr));
+
+//15. Complex flat array
+const complexArray = [
+  1,
+  [2, [3, 4, [5, 6]], 7],
+  {
+    a: 8,
+    b: [9, 10, { c: 11, d: [12, [13]] }],
+  },
+  [[[[14]]]],
+  "text",
+  [
+    [
+      { name: "Alice", hobbies: ["reading", ["coding", ["chess"]]] },
+      [true, false],
+    ],
+  ],
+];
+
+function flatten(arr) {
+  let stack = [...arr];
+  let result = [];
+
+  while (stack.length) {
+    let current = stack.pop();
+    if (Array.isArray(current)) {
+      stack.push(...current);
+    } else if (current !== null && typeof current === "object") {
+      stack.push(...Object.values(current));
+    } else {
+      result.push(current);
+    }
+  }
+  return result.reverse();
+}
+
+console.log(flatten(complexArray));
