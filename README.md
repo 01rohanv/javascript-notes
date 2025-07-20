@@ -27,3 +27,4 @@
 25. [Find all Symmetric pairs in an array](./index.js#465)
 26. [Merge overlapping intervals](./index.js#486)
 27. [Balanced Parenthesis Problem](./index.js#512)
+28. [Maximum profit by buying and selling a share atmost twice](./index.js#535)

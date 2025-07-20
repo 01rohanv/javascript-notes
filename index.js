@@ -531,3 +531,20 @@ function isValid(s) {
   return stack.length === 0;
 }
 console.log(isValid("()[]{}"));
+
+// Maximum profit by buying and selling a share atmost twice
+function maxProfit(prices) {
+  let minPrice = Infinity;
+  let maxProfit = 0;
+
+  for (let price of prices) {
+    if (price < minPrice) {
+      minPrice = price; // Update minimum price
+    } else {
+      maxProfit = Math.max(maxProfit, price - minPrice); // Update profit
+    }
+  }
+
+  return maxProfit;
+}
+console.log(maxProfit([7, 1, 5, 3, 6, 4]));
