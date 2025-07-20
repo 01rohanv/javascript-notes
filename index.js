@@ -380,4 +380,84 @@ function flatten(arr) {
   return result.reverse();
 }
 
-console.log(flatten(complexArray));
+//16. Finding the Longest Palindrome in an Array
+const words = ["madam", "apple", "noon", "racecar", "banana"];
+
+function isPalindrome(str) {
+  return str === str.split("").reverse().join("");
+}
+function longestPalindrome(arr) {
+  let longest = "";
+  for (let word of arr) {
+    if (isPalindrome(word) && word.length > longest.length) {
+      longest = word;
+    }
+  }
+  return longest || null;
+}
+
+console.log(longestPalindrome(words));
+
+//17. Summation of values
+const dataObj = {
+  value: 2,
+  data: {
+    value: 2,
+    data: {
+      value: 3,
+    },
+  },
+};
+
+function sumValues(obj) {
+  if (!obj) return 0;
+
+  let sum = obj.value || 0;
+  if (obj.data) {
+    sum += sumValues(obj.data);
+  }
+  return sum;
+}
+console.log(sumValues(dataObj));
+
+// Counting the number of even and odd elements in an array
+const numbers = [1, 2, 3, 4, 5, 6, 7];
+function Count(arr) {
+  let even = 0;
+  let odd = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      even++;
+    } else {
+      odd++;
+    }
+  }
+  return { even, odd };
+}
+console.log(Count(numbers));
+
+// Replace each element of the array by its rank in the array
+const input = [100, 20, 30, 20];
+
+function rankArray(arr) {
+  const sorted = [...arr].sort((a, b) => a - b);
+  // console.log(sorted)
+  let rankObj = {};
+  let rank = 1;
+  for (let i = 0; i < sorted.length; i++) {
+    if (!rankObj[sorted[i]]) {
+      rankObj[sorted[i]] = rank++;
+    }
+  }
+  // console.log(rankObj)
+  return arr.map((num) => rankObj[num]);
+}
+console.log(rankArray(input));
+
+// Rotation of elements of array- left and right
+
+function rotateLeft(arr, k) {
+  return arr.slice(k).concat(arr.slice(0, k));
+}
+console.log(rotateLeft([1, 2, 3, 4, 5], 2));

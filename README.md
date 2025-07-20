@@ -19,3 +19,8 @@
 17. [Sort Half Asc Half Desc](./index.js#L311)
 18. [Sort by Frequency](./index.js#L324)
 19. [Flat Complex](./index.js#L348)
+20. [Finding the Longest Palindrome in an Array](index.js#383)
+21. [Summation of values](./index.js#402)
+22. [Counting the number of even and odd elements in an array](./index.js#423)
+23. [Replace each element of the array by its rank in the array](./index.js#440)
+24. [Rotation of elements of array- left and right](./index.js#458)
