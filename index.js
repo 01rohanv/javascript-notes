@@ -461,3 +461,50 @@ function rotateLeft(arr, k) {
   return arr.slice(k).concat(arr.slice(0, k));
 }
 console.log(rotateLeft([1, 2, 3, 4, 5], 2));
+
+// Find all Symmetric pairs in an array
+// const input = [[1, 2], [3, 4], [5, 9], [4, 3], [9, 5]];
+
+function findSymmetricPairs(pairs) {
+  const map = new Map();
+  const result = [];
+
+  for (let [a, b] of pairs) {
+    if (map.has(b) && map.get(b) === a) {
+      result.push([b, a]);
+    } else {
+      map.set(a, b);
+      console.log(map);
+    }
+  }
+
+  return result;
+}
+
+// console.log(findSymmetricPairs(input));
+
+// Merge overlapping intervals
+function mergeInterval(interval) {
+  interval.sort((a, b) => a[0] - b[0]);
+  const merge = [interval[0]];
+  for (let i = 1; i < interval.length; i++) {
+    let last = merge[merge.length - 1];
+    let start = interval[i];
+    // console.log(start,last)
+
+    if (start[0] <= last[1]) {
+      last[1] = Math.max(last[1], start[1]);
+    } else {
+      merge.push(start);
+    }
+  }
+  return merge;
+}
+console.log(
+  mergeInterval([
+    [1, 3],
+    [8, 10],
+    [15, 18],
+    [2, 6],
+  ])
+);

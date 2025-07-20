@@ -24,3 +24,5 @@
 22. [Counting the number of even and odd elements in an array](./index.js#423)
 23. [Replace each element of the array by its rank in the array](./index.js#440)
 24. [Rotation of elements of array- left and right](./index.js#458)
+25. [Find all Symmetric pairs in an array](./index.js#465)
+26. [Merge overlapping intervals](./index.js#486)
